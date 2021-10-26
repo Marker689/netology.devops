@@ -1,20 +1,11 @@
-# Домашние задания по курсу «DevOps и системное администрирование» 
+# Репозиторий домашней работы Нетология DevOps
 
-
-В этом репозитории расположены ваши домашние задания к каждой лекции. 
-
-Обязательными к выполнению являются задачи без указания звездочки. Их выполнение необходимо для получения зачета и диплома о профессиональной переподготовке.
-
-Задачи со звездочкой (*) являются дополнительными задачами и/или задачами повышенной сложности. Они не являются обязательными к выполнению, но помогут вам глубже понять тему.
-
-Любые вопросы по решению задач задавайте в чате Slack (ссылку вы найдете в письме на вашей эл. почте).
 
 ## Модуль 1. Введение в DevOps
 
 1.1. [x] [Введение в DevOps](01-intro-01/README.md)
 
 ## Модуль 2. Системы управления версиями
-
 2.1. [x] [Системы контроля версий](02-git-01-vcs/README.md)
 
 2.2. [x] [Основы Git](02-git-02-base/README.md)
@@ -22,35 +13,53 @@
 2.3. [x] [Ветвления в Git](02-git-03-branching/README.md)
 
 2.4. [x] [Инструменты Git](02-git-04-tools/README.md)
-
 ## Модуль 3. Основы системного администрировани
 
-3.1. [x] [Работа в терминале (лекция 1)](03-sysadmin-01-terminal/README.md)
+3.1. [x] [Работа в терминале, лекция 1](03-sysadmin-01-terminal/README.md)
 
-3.2. [x] [Работа в терминале (лекция 2)](03-sysadmin-02-terminal/README.md)
+3.2. [x] [Работа в терминале, лекция 2](03-sysadmin-02-terminal/README.md)
 
-3.3. [х] [Операционные системы (лекция 1)](https://github.com/netology-code/sysadm-homeworks/tree/master/03-sysadmin-03-os)
+3.3. [x] [ОС, лекция 1](03-sysadmin-03-os/README.md)
 
-3.4. [х] [Операционные системы (лекция 2)](https://github.com/netology-code/sysadm-homeworks/tree/master/03-sysadmin-04-os)
+3.4. [x] [ОС, лекция 2](03-sysadmin-04-os/README.md)
 
-3.5. [х] [Файловые системы](https://github.com/netology-code/sysadm-homeworks/tree/master/03-sysadmin-05-fs)
+3.5. [x] [ФС, лекция 1](03-sysadmin-05-fs/README.md)
 
-3.6. [x] [Компьютерные сети (лекция 1)](https://github.com/netology-code/sysadm-homeworks/tree/master/03-sysadmin-06-net)
+3.6. [x] [NET, лекция 1](03-sysadmin-06-net/README.md)
 
-3.7. [х] [Компьютерные сети (лекция 2)](https://github.com/netology-code/sysadm-homeworks/tree/master/03-sysadmin-07-net)
+3.7. [x] [NET, лекция 2](03-sysadmin-07-net/README.md)
 
-3.8. [х] [Компьютерные сети (лекция 3)](https://github.com/netology-code/sysadm-homeworks/tree/master/03-sysadmin-08-net)
+3.8. [x] [NET, лекция 3](03-sysadmin-08-net/README.md)
 
-3.9. [х] [Элементы безопасности информационных систем](https://github.com/netology-code/sysadm-homeworks/tree/master/03-sysadmin-09-security)
-
+3.9. [x] [SEC, лекция 1](03-sysadmin-09-security/README.md)
 ## Модуль 4. Скриптовые языки и языки разметки: Python, Bash, YAML, JSON
 
-4.1. [х] [Командная оболочка Bash: практические навыки](https://github.com/netology-code/sysadm-homeworks/tree/master/04-script-01-bash)
+4.1. [х] [Командная оболочка Bash: практические навыки](04-script-01-bash)
 
-4.2. [x] [Использование Python для решения типовых DevOps задач](https://github.com/netology-code/sysadm-homeworks/tree/master/04-script-02-py)
+4.2. [x] [Использование Python для решения типовых DevOps задач](04-script-02-py)
 
-4.3. [x] [Языки разметки JSON и YAML](https://github.com/netology-code/sysadm-homeworks/tree/master/04-script-03-yaml)
+4.3. [x] [Языки разметки JSON и YAML](04-script-03-yaml)
+## Модуль 5. Виртуализация
 
-## Дополнительные материалы
+5.1. [x] [Введение в виртуализацию. Типы и функции гипервизоров. Обзор рынка вендоров и областей применения.](05-virt-01-basics)
 
-1. [x] [Модуль 4. Скриптовые языки и языки разметки: Python, Bash, YAML, JSON](https://github.com/netology-code/sysadm-homeworks/tree/master/04-script-03-yaml/additional-info)
+5.2. [x] [Применение принципов IaaC в работе с виртуальными машинами](05-virt-02-iaac)
+
+5.3. [x] [Введение. Экосистема. Архитектура. Жизненный цикл Docker контейнера](05-virt-03-docker)
+
+5.4. [x] [Оркестрация группой Docker контейнеров на примере Docker Compose](05-virt-04-docker-compose)
+
+5.5. [x] [Оркестрация кластером Docker контейнеров на примере Docker Swarm](05-virt-05-docker-swarm)
+## Модуль 6. Администрирование баз данных
+
+6.1. [x] [Типы и структура СУБД](06-db-01-basics)
+
+6.2. [x] [SQL](06-db-02-sql)
+
+6.3. [x] [MySQL](06-db-03-mysql)
+
+6.4. [x] [PostgreSQL](06-db-04-postgresql)
+
+6.5. [x] [ElasticSearch](06-db-05-elasticsearch)
+
+6.6. [x] [Troubleshooting](06-db-06-troubleshooting)

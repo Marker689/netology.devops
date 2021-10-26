@@ -1,0 +1,3 @@
+node.name: netology_test
+path.data: /var/lib/elasticsearch/data/
+http.port: 9200
