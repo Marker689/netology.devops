@@ -63,3 +63,5 @@
 6.5. [x] [ElasticSearch](06-db-05-elasticsearch)
 
 6.6. [x] [Troubleshooting](06-db-06-troubleshooting)
+
+7.1. [x] [Инфраструктура как код](07-terraform-01-intro)
