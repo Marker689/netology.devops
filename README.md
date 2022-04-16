@@ -64,4 +64,8 @@
 
 6.6. [x] [Troubleshooting](06-db-06-troubleshooting)
 
+## Модуль 7. Облачная инфраструктура. Terraform.
+
 7.1. [x] [Инфраструктура как код](07-terraform-01-intro)
+
+7.2. [x] [Облачные провайдеры и синтаксис Terraform](07-terraform-02-syntax)
