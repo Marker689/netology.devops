@@ -1,2 +1,3 @@
 /.idea/*
-/devops-diplom/*
+/devops-diplom/*/.terraform*
+/devops-diplom/terraform/key.json

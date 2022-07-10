@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  registrer:
+    image: gitlab/gitlab-runner:latest
+    volumes:
+      - ./runner-data:/etc/gitlab-runner:z
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./entrypoint.sh:/etc/entrypoint.sh
+    entrypoint: /etc/entrypoint.sh
+
+  runner:
+    image: gitlab/gitlab-runner:latest
+    tty: true
+    depends_on:
+      - registrer
+    restart: always
+    volumes:
+      - ./runner-data:/etc/gitlab-runner:Z
+      - /var/run/docker.sock:/var/run/docker.sock

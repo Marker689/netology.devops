@@ -1,0 +1,68 @@
+server_tokens off;
+
+server {
+    listen 80;
+    server_name {{ domain_name }};
+
+    location /.well-known/acme-challenge {
+        root /var/www/letsencrypt;
+        try_files $uri $uri/ =404;
+    }
+
+    location / {
+        rewrite ^ https://{{ domain_name }}$request_uri? permanent;
+    }
+}
+
+server {
+    listen 80;
+    server_name gitlab.kharitonov.su;
+
+    location /.well-known/acme-challenge {
+        root /var/www/letsencrypt;
+        try_files $uri $uri/ =404;
+    }
+
+    location / {
+        rewrite ^ https://gitlab.kharitonov.su$request_uri? permanent;
+    }
+}
+server {
+    listen 80;
+    server_name grafana.kharitonov.su;
+
+    location /.well-known/acme-challenge {
+        root /var/www/letsencrypt;
+        try_files $uri $uri/ =404;
+    }
+
+    location / {
+        rewrite ^ https://grafana.kharitonov.su$request_uri? permanent;
+    }
+}
+server {
+    listen 80;
+    server_name prometheus.kharitonov.su;
+
+    location /.well-known/acme-challenge {
+        root /var/www/letsencrypt;
+        try_files $uri $uri/ =404;
+    }
+
+    location / {
+        rewrite ^ https://prometheus.kharitonov.su$request_uri? permanent;
+    }
+}
+server {
+    listen 80;
+    server_name alertmanager.kharitonov.su;
+
+    location /.well-known/acme-challenge {
+        root /var/www/letsencrypt;
+        try_files $uri $uri/ =404;
+    }
+
+    location / {
+        rewrite ^ https://alertmanager.kharitonov.su$request_uri? permanent;
+    }
+}

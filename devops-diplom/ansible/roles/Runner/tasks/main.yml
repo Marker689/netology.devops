@@ -1,0 +1,42 @@
+---
+- name: Install prerequisites for Docker repository
+  apt:
+    pkg: ['lsb-release', 'ca-certificates', 'curl', 'gnupg']
+    update_cache: yes
+
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+
+- name: Add Docker APT repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/{{ ansible_system | lower }}/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable
+
+- name: Install Docker CE
+  apt:
+    pkg: ['docker-ce', 'docker-ce-cli', 'containerd.io', 'docker-compose-plugin', 'docker-compose']
+    update_cache: yes
+    
+
+- name: Enable docker daemon
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
+    
+- name: Sync entrypoint.sh
+  template:
+    src: templates/entrypoint.sh
+    dest: /opt/runner/
+    mode: 077
+    
+- name: Sync docker-compose.yml
+  template:
+    src: templates/docker-compose.yaml
+    dest: /opt/runner/
+    
+- name: Pull all images in compose
+  command: docker-compose -f /opt/runner/docker-compose.yaml pull
+
+- name: Up all services in compose
+  command: docker-compose -f /opt/runner/docker-compose.yaml up -d

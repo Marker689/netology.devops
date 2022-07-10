@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: marker
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCUptIE0Dmw2cwsNN9R8jMPgGgIVuRRK7AMsGKtb/l6xUKpqjdDvY9OnH1RV1NSNHR3aYslW/Jq0JPmx3l8nEvu1j0KqWnNVHzEC+mRCHHTy/p0oT8IKW0PGHVl9KWGIhoPhj2mkzCSoYzL4Iv/T9srzu59UTAO4AY02QYOrjo38ABWnXB1quCEnlDgUWvJBMOi69rObAtW60L3Vq/m21A8ewOBGnMGmi4CiSJJvUjog4oz76LNnIEsJtUKWQhfvzmbewGXtNdqDhjwBta8sBzrvh8voO5Estef2xZBA00oqopeapkkZ4o2F5TrgJycMy8BaSDVPzqRT8lhqHwAQ2eg99ldW9BDxe6lILaI2E8gldK2dq8wETH2qowvJJZ4R9uUiW3tNxcS5M/4lbwe9CCxzfMg3+zqjGakfrsK4F6l2MObeAp2Fm30caSCx1+25Yozlw1A44SLmTr2jKvLWlvYqpE4lgHSM85ubw9zMAJDiL6rLpQKLQXx8qokBV+1TDs= marker@vps

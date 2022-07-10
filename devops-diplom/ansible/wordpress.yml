@@ -1,0 +1,20 @@
+- hosts: app
+  gather_facts: true
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    marker
+  vars:
+    - domain: "kharitonov.su"
+    - download_url: "http://wordpress.org/latest.tar.gz"
+    - wpdirectory: "/var/www"
+ 
+  roles:
+   - nginx
+   - memcached
+   - php5
+   - wordpress

@@ -1,0 +1,36 @@
+[nginx]
+kharitonov.su  letsencrypt_email=marker689@gmail.com domain_name=kharitonov.su
+
+[mysql]
+db01.kharitonov.su mysql_server_id=1 mysql_replication_role=master
+db02.kharitonov.su mysql_server_id=2 mysql_replication_role=slave
+
+[app]
+app.kharitonov.su
+
+[gitlab]
+gitlab.kharitonov.su
+
+[runner]
+runner.kharitonov.su
+
+[monitoring]
+monitoring.kharitonov.su
+
+#[proxy]
+#www.kharitonov.su
+
+[mysql:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q marker@www.kharitonov.su"'
+
+[app:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q marker@www.kharitonov.su"'
+
+[monitoring:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q marker@www.kharitonov.su"'
+
+[gitlab:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q marker@www.kharitonov.su"'
+
+[runner:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q marker@www.kharitonov.su"'
